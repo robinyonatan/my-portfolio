@@ -1,0 +1,481 @@
+/* style.css */
+
+/* Basic Reset & Body Styles */
+body {
+    margin: 0;
+    font-family: sans-serif; /* Ganti dengan font yang sesuai */
+    background-color: #1a1a1a; /* Warna latar belakang gelap */
+    color: #e0e0e0; /* Warna teks terang */
+    line-height: 1.6;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+/* Global Container (opsional, jika ingin mengatur lebar konten) */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Top */
+.header-top {
+    background-color: #0d0d0d;
+    padding: 20px 40px;
+    border-bottom: 1px solid #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #b0b0b0;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+/* Section 1: Featured Artworks */
+.featured-artworks {
+    padding: 80px 40px;
+    text-align: center;
+    position: relative;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 60px;
+    color: #fff;
+}
+
+.artwork-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+}
+
+.artwork-item {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #444;
+}
+
+.artwork-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.artwork-item h3 {
+    margin: 10px 0 5px 0;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.artwork-item p {
+    color: #b0b0b0;
+    font-size: 0.8em;
+    margin-bottom: 20px;
+}
+
+.btn-view-more {
+    background-color: #444;
+    color: #fff;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.8em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-view-more:hover {
+    background-color: #666;
+}
+
+.featured-artworks .date {
+    position: absolute;
+    top: 50px; /* Sesuaikan posisi sesuai gambar */
+    right: 40px;
+    color: #888;
+    font-size: 0.8em;
+}
+
+.btn-see-more-global {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.btn-see-more-global:hover {
+    background-color: #555;
+}
+
+
+/* Section 2: Main Content / Exploring Art */
+.main-content {
+    background-color: #0d0d0d;
+    padding: 60px 40px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    position: relative; /* Untuk penempatan welcome-info */
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.content-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.content-nav li {
+    margin-right: 30px;
+}
+
+.content-nav a {
+    text-decoration: none;
+    color: #b0b0b0;
+    font-size: 1em;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.content-nav a:hover,
+.content-nav a.active {
+    color: #fff;
+}
+
+.content-nav a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+.welcome-info {
+    display: flex;
+    align-items: center;
+    color: #b0b0b0;
+    font-size: 0.9em;
+}
+
+.welcome-info img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #555; /* Placeholder for user icon */
+}
+
+.welcome-info .menu-dots {
+    font-size: 1.5em;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 50%; /* Sesuaikan lebar teks */
+}
+
+.hero-text .date-small {
+    color: #888;
+    font-size: 0.8em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.hero-text h1 {
+    font-size: 3.5em;
+    color: #fff;
+    margin: 0 0 20px 0;
+    line-height: 1.1;
+}
+
+.btn-read-more {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn-read-more:hover {
+    background-color: #fff;
+    color: #0d0d0d;
+}
+
+.pagination {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pagination span {
+    font-size: 0.9em;
+    color: #b0b0b0;
+}
+
+.pagination button {
+    background: none;
+    border: 1px solid #b0b0b0;
+    color: #b0b0b0;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #b0b0b0;
+    color: #0d0d0d;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 50%;
+    height: 400px; /* Sesuaikan tinggi */
+    background-image: url('placeholder-main-art.jpg'); /* Ganti dengan gambar yang sesuai */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+
+/* Section 3: Artiste Blog */
+.artiste-blog {
+    padding: 60px 40px;
+    background-color: #1a1a1a; /* Sama dengan body background */
+}
+
+.blog-header {
+    margin-bottom: 50px;
+}
+
+.blog-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Pindahkan ke kanan */
+    gap: 30px;
+}
+
+.blog-nav a {
+    text-decoration: none;
+    color: #b0b0b0;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.blog-nav a:hover {
+    color: #fff;
+}
+
+.blog-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.blog-title h1 {
+    font-size: 3.5em;
+    color: #fff;
+    line-height: 1;
+    margin: 0;
+}
+
+.blog-info {
+    text-align: right;
+    color: #b0b0b0;
+    font-size: 0.9em;
+}
+
+.blog-info .info-line {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin: 5px 0;
+}
+
+.blog-info .info-line span {
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.museum-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.blog-item img {
+    width: 100%;
+    height: 300px; /* Sesuaikan tinggi gambar blog */
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+/* Responsiveness (Basic) */
+@media (max-width: 768px) {
+    .header-top,
+    .featured-artworks,
+    .main-content,
+    .artiste-blog {
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links li {
+        margin: 0 15px 10px 0;
+    }
+
+    .artwork-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-artworks .date {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text,
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    .blog-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .blog-info {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .blog-info .info-line {
+        justify-content: center;
+    }
+
+    .museum-link {
+        position: static;
+        margin-top: 20px;
+        display: block;
+    }
+
+    .blog-nav ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title,
+    .hero-text h1,
+    .blog-title h1 {
+        font-size: 2em;
+    }
+
+    .pagination {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
